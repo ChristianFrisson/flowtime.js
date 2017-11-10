@@ -1499,6 +1499,7 @@ var Flowtime = (function ()
    */
   function _updateNavigation(fireEvent) {
     _fireEvent = fireEvent === false ? false : true;
+    NavigationMatrix.update();
     var currentPagePreUpdate = NavigationMatrix.getCurrentPage();
     NavigationMatrix.update();
     //
@@ -2575,6 +2576,7 @@ var Flowtime = (function ()
    * return object for public methods
    */
   return {
+    NavigationMatrix         : NavigationMatrix,
     start                    : _start,
     updateNavigation         : _updateNavigation,
 
